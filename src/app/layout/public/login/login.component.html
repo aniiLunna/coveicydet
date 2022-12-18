@@ -1,0 +1,44 @@
+<link href="login.component.css" rel="stylesheet" />
+<link href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/styles.css?alt=media&token=a7687bda-a86c-4550-8a81-a23ad852f3c2" rel="stylesheet" />
+<div class="toolbar">
+        <img
+        alt="Logo COVEICyDET"
+        src="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/logo-coveicydet.png?alt=media&token=19570ae7-2d83-4b88-8c56-996bb67072f4"/>
+</div>
+
+<div class="main_div">
+    <div class="text_div">
+        <p>Bienvenido a la Plataforma del Padron Veracruzano de Investigadores</p>
+    </div>
+    <div class="form_div">
+        <form class="login_form" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+            <h1>Login</h1>
+            <div class="input_div">
+                <label for="user_input">Usuario</label>
+                <input formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched" type="text" class="form_input" id="user_input" placeholder="RFC o Correo Electronico">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Ingrese su usuario
+                </div>
+            </div>
+
+            <div class="pass_div">
+                <label for="pass_input">Contraseña</label>
+                <input formControlName="password" [class.is-invalid]="f.password.errors && f.password.touched" type="password" class="form_input" id="pass_input" placeholder="Contraseña">
+                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                    Ingrese su contraseña
+                </div>
+                <div id="forget_pass">
+                    <a href="/forget-password">Olvide mi contraseña</a>
+                </div>
+
+            </div>
+            
+            <div class="input_div">
+                <button class="btn btn_success">Aceptar</button>
+            </div>
+            <div id="registrar">
+                <p>¿No esta registrado? <a href="">Registrate aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>
