@@ -29,6 +29,7 @@ import { PatentesComponent } from './layout/private/patentes/patentes.component'
 import { RevistasIndexadasComponent } from './layout/private/revistas-indexadas/revistas-indexadas.component';
 import { DivulgacionCientificaComponent } from './layout/private/divulgacion-cientifica/divulgacion-cientifica.component';
 import { ImplementacionTecnologicaComponent } from './layout/private/implementacion-tecnologica/implementacion-tecnologica.component';
+import { PncpComponent } from './layout/private/pncp/pncp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { ImplementacionTecnologicaComponent } from './layout/private/implementac
     RevistasIndexadasComponent,
     DivulgacionCientificaComponent,
     ImplementacionTecnologicaComponent,
+    PncpComponent,
   ],
   imports: [
     BrowserModule,
