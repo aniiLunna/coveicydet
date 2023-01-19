@@ -32,6 +32,7 @@ import { ImplementacionTecnologicaComponent } from './layout/private/implementac
 import { PncpComponent } from './layout/private/pncp/pncp.component';
 import { TesisComponent } from './layout/private/tesis/tesis.component';
 import { SniComponent } from './layout/private/sni/sni.component';
+import { EstanciasComponent } from './layout/private/estancias/estancias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { SniComponent } from './layout/private/sni/sni.component';
     PncpComponent,
     TesisComponent,
     SniComponent,
+    EstanciasComponent,
   ],
   imports: [
     BrowserModule,
