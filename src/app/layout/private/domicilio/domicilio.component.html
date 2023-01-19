@@ -1,0 +1,191 @@
+<link rel="stylesheet" href="domicilio.component.css">
+<link href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/styles.css?alt=media&token=5cb58561-558c-414b-893e-b2cedcf41969" rel="stylesheet" />
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/domicilio" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Datos Generales 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/datos-generales">Información Personal</a></li>
+                  <li><a class="dropdown-item" routerLink="/lugar-de-nacimiento">Lugar de nacimiento</a></li>
+                  <li><a class="dropdown-item" routerLink="/domicilio">Domicilio Particular</a></li>
+                  <li><a class="dropdown-item" routerLink="/contacto">Contacto</a></li>
+                  <li><a class="dropdown-item" routerLink="/area-de-desarrollo">Area de desarrollo</a></li>
+                  <li><a class="dropdown-item" routerLink="/formacion-academica">Formacion academica</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/domicilio" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Producción cientifica 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/produccion-cientifica">Autoria/Coautoria de Libros</a></li>
+                  <li><a class="dropdown-item" routerLink="/proyectos-de-investigacion">Proyectos de Investigación</a></li>
+                  <li><a class="dropdown-item" routerLink="/patentes">Patentes</a></li>
+                  <li><a class="dropdown-item" routerLink="/articulos-revista-indexada">Articulos de Revista Indexada</a></li>
+                  <li><a class="dropdown-item" routerLink="/articulos-revista-de-divulgacion">Articulos de Revista de Divulgación Cientifica</a></li>
+                  <li><a class="dropdown-item" routerLink="implementacion-tecnologica">Implementación Tecnológica</a></li>
+                  <li><a class="dropdown-item" routerLink="grados-academicos-pnpc">Grados Academicos en PNPC</a></li>
+                  <li><a class="dropdown-item" routerLink="forma-obtencion-grados">Forma de Obtención de Grados</a></li>
+                  <li><a class="dropdown-item" routerLink="sni">SNI</a></li>
+                  <li><a class="dropdown-item" routerLink="estancias">Estancias</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/domicilio" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Documentos 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/documentos">INE</a></li>
+                  <li><a class="dropdown-item" routerLink="/adscripcion-institucional">Adscripción Institucional</a></li>
+                  <li><a class="dropdown-item" routerLink="/participacion-en-proyectos">Participación en Proyectos</a></li>
+                  <li><a class="dropdown-item" routerLink="/comprobante-produccion-cientifica">Producción Cientifica</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link disabled"> Tiempo: 30:00 </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/domicilio" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Guias 
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"  href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/coveicydet-guia%2FGuia-de-usuario.pdf?alt=media&token=8fb0528b-c9dd-4746-8564-55e3512055c1" target="_blank">Giua de usuario</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/coveicydet-guia%2FCampos%20y%20Disciplinas.pdf?alt=media&token=ba527494-c71e-4939-b5f2-e0ebd98a7c1c">Guia de campos y disciplinas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="salir()" style="cursor: pointer;"> Salir </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="main_div">
+    <form class="general_form" (submit)="guardar()">
+      <h1>Domicilio particular</h1> 
+     
+    <div class="input_div"> 
+     <div>
+       <label for="calle_input">Calle</label>
+        <input 
+            [(ngModel)] = "domicilio.calle"
+            name = "calle"
+            type="text"
+            class="form_input mayuscula" 
+            id="calle_input"
+            placeholder="Calle"
+            maxlength="30"
+            required
+        />
+     </div>
+ 
+     <div>
+        <label for="numero_input">Numero</label>
+        <input 
+            [(ngModel)] = "domicilio.numero"
+            name = "numero"
+            type="text"
+            class="form_input" 
+            id="numero_input"
+            placeholder="Numero"
+            maxlength="5"
+            required 
+        />
+     </div>
+ 
+     <div>
+        <label for="colonia_input">Colonia</label>
+        <input
+            [(ngModel)] = "domicilio.colonia"
+            name = "colonia"
+            type="text"
+            class="form_input mayuscula" 
+            id="colonia_input"
+            placeholder="Colonia"
+            maxlength="35"
+            required 
+        />   
+    </div>
+   </div>
+ 
+    <div class="input_div">
+        <div>
+            <label for="municipio_input">Municipio</label>
+            <input
+                [(ngModel)] = "domicilio.municipio"
+                name = "municipio"
+                type="text"
+                class="form_input mayuscula" 
+                id="municipio_input"
+                placeholder="Municipio"
+                maxlength="35"
+                required 
+            />  
+        </div>
+ 
+       <div>
+            <label for="estado_input">Estado</label>
+            <input
+                [(ngModel)] = "domicilio.estado"
+                name = "estado"
+                type= "text"
+                class= "form_input mayuscula" 
+                id= "estado_input"
+                placeholder= "Estado"
+                maxlength="35"
+                required 
+            /> 
+       </div>
+ 
+       <div>
+            <label for="pais_input">Pais</label>
+            <input
+                [(ngModel)] = "domicilio.pais"
+                name = "pais"
+                type= "text"
+                class= "form_input mayuscula" 
+                id= "pais_input"
+                placeholder= "Pais"
+                maxlength="35"
+                required 
+            /> 
+       </div>
+   </div>
+
+   <div class="input_div">
+    <div>
+        <label for="codigoPostal_input">Codigo Postal</label>
+        <input
+            [(ngModel)] = "domicilio.codigoPostal"
+            name = "codigoPostal"
+            type= "text"
+            class= "form_input" 
+            id= "codigoPostal_input"
+            placeholder= "Codigo Postal"
+            maxlength="6"
+            required 
+        /> 
+    </div>
+   </div>
+ 
+   <div class="button_div">
+     <button type="submit" class="btn btn_success">Guardar</button>
+     <button id="next_button" type="submit"  routerLink="/contacto">Siguiente</button>
+  </div>
+ 
+    </form>
+ </div>

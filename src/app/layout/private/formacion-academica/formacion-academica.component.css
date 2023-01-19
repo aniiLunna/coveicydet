@@ -1,0 +1,118 @@
+h1{
+    font-size: 20pt;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+.main_div {
+    display: block;
+    padding: 2rem 5rem;
+    position: relative;
+}
+
+table {
+    border: 1;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.title {
+    text-align: center;
+    background-color: #D9D9D9;
+    font-weight: bold;
+}
+
+button {
+    letter-spacing: 0.1em;
+    border: none;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #04032E;
+    width: 20%;
+    display: block;
+    padding: 0.43rem 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .button_div {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+
+  #next_button {
+    margin-left: 20px;
+    letter-spacing: 0.1em;
+    border: #04032E;
+    font-size: 1rem;
+    color: #04032E;
+    background-color: #ffffff;
+    width: 20%;
+    display: block;
+    padding: 0.43rem 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+  }
+
+  .input_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around
+  }
+  
+  .input_div div {
+    width: 100%;
+  }
+  select{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 85%;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: none;
+    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+        rgba(0, 0, 0, 0.1);
+    border: 0 none;
+    background: #ebf5fc;
+
+  }
+  input {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 85%;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: none;
+    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+        rgba(0, 0, 0, 0.1);
+    border: 0 none;
+    background: #ebf5fc;
+  }
+  
+  label {
+    display: block;
+  }
+
+  .demo {
+		border:1px sólido #ADA9A9;
+		border-collapse:colapso;
+		border-spacing:2px;
+		padding:5px;
+	}
+	.demo th {
+		border:1px sólido #ADA9A9;
+		padding:5px;
+		background:#F0F0F0;
+	}
+	.demo td {
+		border:1px sólido #ADA9A9;
+		text-align:izquierda;
+		padding:5px;
+	}
