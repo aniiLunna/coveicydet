@@ -25,6 +25,7 @@ import { AreaDesarrolloComponent } from './layout/private/area-desarrollo/area-d
 import { FormacionAcademicaComponent } from './layout/private/formacion-academica/formacion-academica.component';
 import { LibrosComponent } from './layout/private/libros/libros.component';
 import { ProyectosDeInvestigacionComponent } from './layout/private/proyectos-de-investigacion/proyectos-de-investigacion.component';
+import { PatentesComponent } from './layout/private/patentes/patentes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { ProyectosDeInvestigacionComponent } from './layout/private/proyectos-de
     FormacionAcademicaComponent,
     LibrosComponent,
     ProyectosDeInvestigacionComponent,
+    PatentesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,186 @@
+<link rel="stylesheet" href="patentes.component.css">
+<link href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/styles.css?alt=media&token=5cb58561-558c-414b-893e-b2cedcf41969" rel="stylesheet" />
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Datos Generales 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/datos-generales">Información Personal</a></li>
+                  <li><a class="dropdown-item" routerLink="/lugar-de-nacimiento">Lugar de nacimiento</a></li>
+                  <li><a class="dropdown-item" routerLink="/domicilio">Domicilio Particular</a></li>
+                  <li><a class="dropdown-item" routerLink="/contacto">Contacto</a></li>
+                  <li><a class="dropdown-item" routerLink="/area-de-desarrollo">Area de desarrollo</a></li>
+                  <li><a class="dropdown-item" routerLink="/formacion-academica">Formacion academica</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Producción cientifica 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/produccion-cientifica">Autoria/Coautoria de Libros</a></li>
+                  <li><a class="dropdown-item" routerLink="/proyectos-de-investigacion">Proyectos de Investigación</a></li>
+                  <li><a class="dropdown-item" routerLink="/patentes">Patentes</a></li>
+                  <li><a class="dropdown-item" routerLink="/articulos-revista-indexada">Articulos de Revista Indexada</a></li>
+                  <li><a class="dropdown-item" routerLink="/articulos-revista-de-divulgacion">Articulos de Revista de Divulgación Cientifica</a></li>
+                  <li><a class="dropdown-item" routerLink="implementacion-tecnologica">Implementación Tecnológica</a></li>
+                  <li><a class="dropdown-item" routerLink="grados-academicos-pnpc">Grados Academicos en PNPC</a></li>
+                  <li><a class="dropdown-item" routerLink="forma-obtencion-grados">Forma de Obtención de Grados</a></li>
+                  <li><a class="dropdown-item" routerLink="sni">SNI</a></li>
+                  <li><a class="dropdown-item" routerLink="estancias">Estancias</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Documentos 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/documentos">INE</a></li>
+                  <li><a class="dropdown-item" routerLink="/adscripcion-institucional">Adscripción Institucional</a></li>
+                  <li><a class="dropdown-item" routerLink="/participacion-en-proyectos">Participación en Proyectos</a></li>
+                  <li><a class="dropdown-item" routerLink="/comprobante-produccion-cientifica">Producción Cientifica</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link disabled"> Tiempo: 30:00 </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Guias 
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"  href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/coveicydet-guia%2FGuia-de-usuario.pdf?alt=media&token=8fb0528b-c9dd-4746-8564-55e3512055c1" target="_blank">Giua de usuario</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/coveicydet-guia%2FCampos%20y%20Disciplinas.pdf?alt=media&token=ba527494-c71e-4939-b5f2-e0ebd98a7c1c">Guia de campos y disciplinas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="salir()" style="cursor: pointer;"> Salir </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="main_div">
+    <form class="general_form" action="post">
+        <h1>Agregar Patentes</h1> 
+
+   <div class="input_div">
+     <div>
+        <label form="tipo_input">Tipo</label>
+        <input type="tipo" 
+               id="tipo_input"
+               placeholder="Tipo"
+               required="required"
+               name="tipo"
+               [(ngModel)]="tipo" 
+        />
+     </div>
+
+     <div>
+        <label form="nombre_input">Nombre del producto</label>
+        <input type="text" 
+               id="nombreP" 
+               placeholder="Proyecto"
+               required="required"
+               name="nombre"
+               [(ngModel)]="nombre"
+               />
+     </div>
+   </div>
+
+   <div class="input_div">
+     <div>
+        <label form="registro_input">Número de registro.</label>
+        <input type="text" 
+               id="registro_input"
+               placeholder="No. de registro"
+               required="required"
+               name="resgistro"
+               [(ngModel)]="registro"
+               />
+     </div>
+
+     <div>
+        <label form="fecha_input">Fecha.</label>
+        <input type="date" 
+               id="fecha_input"
+               required="required"
+               name="fecha"
+               [(ngModel)]="fecha"
+               />
+     </div>
+
+     <div>
+        <label form="referencia_input">Referencia</label>
+        <input type="text" 
+               id="referencia_input" 
+               placeholder="Referencia"
+               required="required"
+               name="referencia"
+               [(ngModel)]="referencia"
+               />
+     </div>
+</div>
+
+<div class="button_div">
+    <button type="submit" (click)="guardar" >Guardar</button>
+ </div> 
+
+    <table class="table_books" border="1">
+  
+      <tr>
+        <td class="title">Tipo</td>
+        <td class="title">Nombre del producto</td>
+        <td class="title">No. del regitro</td>
+        <td class="title"> Fecha de registro </td>
+        <td class="title">Editar</td> 
+        <td class="title">Eliminar</td>
+      </tr>
+  
+      <tr>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+      </tr>
+  
+      <tr>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+      </tr>
+  
+      <tr>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+        <td> Lorem Ipsum </td>
+      </tr>
+    </table>
+    
+    <div class="button_div">
+      <button id="next_button" type="submit" (click)="next()" href="/revistas()">Siguiente</button>
+   </div>
+  
+
+</form>
+</div>
