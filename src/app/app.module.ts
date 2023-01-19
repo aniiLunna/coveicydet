@@ -30,6 +30,7 @@ import { RevistasIndexadasComponent } from './layout/private/revistas-indexadas/
 import { DivulgacionCientificaComponent } from './layout/private/divulgacion-cientifica/divulgacion-cientifica.component';
 import { ImplementacionTecnologicaComponent } from './layout/private/implementacion-tecnologica/implementacion-tecnologica.component';
 import { PncpComponent } from './layout/private/pncp/pncp.component';
+import { TesisComponent } from './layout/private/tesis/tesis.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { PncpComponent } from './layout/private/pncp/pncp.component';
     DivulgacionCientificaComponent,
     ImplementacionTecnologicaComponent,
     PncpComponent,
+    TesisComponent,
   ],
   imports: [
     BrowserModule,
