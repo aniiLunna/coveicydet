@@ -23,6 +23,8 @@ import { DomicilioComponent } from './layout/private/domicilio/domicilio.compone
 import { ContactoComponent } from './layout/private/contacto/contacto.component';
 import { AreaDesarrolloComponent } from './layout/private/area-desarrollo/area-desarrollo.component';
 import { FormacionAcademicaComponent } from './layout/private/formacion-academica/formacion-academica.component';
+import { LibrosComponent } from './layout/private/libros/libros.component';
+import { ProyectosDeInvestigacionComponent } from './layout/private/proyectos-de-investigacion/proyectos-de-investigacion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,8 @@ import { FormacionAcademicaComponent } from './layout/private/formacion-academic
     ContactoComponent,
     AreaDesarrolloComponent,
     FormacionAcademicaComponent,
+    LibrosComponent,
+    ProyectosDeInvestigacionComponent,
   ],
   imports: [
     BrowserModule,

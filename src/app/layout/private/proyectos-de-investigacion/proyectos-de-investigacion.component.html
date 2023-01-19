@@ -1,0 +1,260 @@
+<link rel="stylesheet" href="proyectos-de-investigacion.component.css">
+<link href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/styles.css?alt=media&token=5cb58561-558c-414b-893e-b2cedcf41969" rel="stylesheet" />
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Datos Generales 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/datos-generales">Información Personal</a></li>
+                  <li><a class="dropdown-item" routerLink="/lugar-de-nacimiento">Lugar de nacimiento</a></li>
+                  <li><a class="dropdown-item" routerLink="/domicilio">Domicilio Particular</a></li>
+                  <li><a class="dropdown-item" routerLink="/contacto">Contacto</a></li>
+                  <li><a class="dropdown-item" routerLink="/area-de-desarrollo">Area de desarrollo</a></li>
+                  <li><a class="dropdown-item" routerLink="/formacion-academica">Formacion academica</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Producción cientifica 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/produccion-cientifica">Autoria/Coautoria de Libros</a></li>
+                  <li><a class="dropdown-item" routerLink="/proyectos-de-investigacion">Proyectos de Investigación</a></li>
+                  <li><a class="dropdown-item" routerLink="/patentes">Patentes</a></li>
+                  <li><a class="dropdown-item" routerLink="/articulos-revista-indexada">Articulos de Revista Indexada</a></li>
+                  <li><a class="dropdown-item" routerLink="/articulos-revista-de-divulgacion">Articulos de Revista de Divulgación Cientifica</a></li>
+                  <li><a class="dropdown-item" routerLink="implementacion-tecnologica">Implementación Tecnológica</a></li>
+                  <li><a class="dropdown-item" routerLink="grados-academicos-pnpc">Grados Academicos en PNPC</a></li>
+                  <li><a class="dropdown-item" routerLink="forma-obtencion-grados">Forma de Obtención de Grados</a></li>
+                  <li><a class="dropdown-item" routerLink="sni">SNI</a></li>
+                  <li><a class="dropdown-item" routerLink="estancias">Estancias</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Documentos 
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/documentos">INE</a></li>
+                  <li><a class="dropdown-item" routerLink="/adscripcion-institucional">Adscripción Institucional</a></li>
+                  <li><a class="dropdown-item" routerLink="/participacion-en-proyectos">Participación en Proyectos</a></li>
+                  <li><a class="dropdown-item" routerLink="/comprobante-produccion-cientifica">Producción Cientifica</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link disabled"> Tiempo: 30:00 </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" routerLink="/formacion-academica" routerLinkActive="active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Guias 
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item"  href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/coveicydet-guia%2FGuia-de-usuario.pdf?alt=media&token=8fb0528b-c9dd-4746-8564-55e3512055c1" target="_blank">Giua de usuario</a></li>
+                <li><a class="dropdown-item" target="_blank" href="https://firebasestorage.googleapis.com/v0/b/msc-coveicydet.appspot.com/o/coveicydet-guia%2FCampos%20y%20Disciplinas.pdf?alt=media&token=ba527494-c71e-4939-b5f2-e0ebd98a7c1c">Guia de campos y disciplinas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="salir()" style="cursor: pointer;"> Salir </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+   
+  <div class="main_div">
+    <form class="general_form" action="post">
+    <h1>Proyectos de investigacón.</h1>
+
+    <div class="input_div">
+    <div>
+            <label form="referencia_input">Referencia.</label>
+            <input type="text" 
+                   id="referencia_input" 
+                   name="referencia"
+                   placeholder="Registrar referencia"
+                   required="required"
+                   [(ngModel)]="referencia"
+                   />
+     </div>
+
+     <div>
+        <label form="titulo_input">Título.</label>
+        <input type="text" 
+               id="titulo_input" 
+               name="titulo"
+               placeholder="Registrar título"
+               required="required"
+               [(ngModel)]="titulo"
+               />
+    </div>
+
+    <div>
+        <label form="particion_input">Partición.</label>
+        <input type="text" 
+               id="particion_input" 
+               name="particion"
+               placeholder="Particion"
+               required="requiered"
+               [(ngModel)]="particion"
+               />
+    </div>
+</div>
+<div class="input_div">
+    <div>
+        <label form="fecha_input">Fecha de inicio.</label>
+        <input type="date" 
+               id="fecha_input" 
+               name="fecha"
+               required="required"
+               [(ngModel)]="fecha"
+               />
+    </div>
+
+    <div >
+        <label form="termino_input">Fecha de termino.</label>
+        <input type="date" 
+               id="termino_input"
+               required="required"
+              [(ngModel)]="termino"
+              name="termino"
+              />
+    </div>
+    
+    <div class="proyectos-de-investigacion col-md-3" >
+        <label form="fechat">Area.</label>
+        <select>
+            <option selected disabled>Seleccione una opción</option>
+        </select>
+    </div>
+   </div>
+
+   <div class="input_div">
+    <div class="proyectos-de-investigacion col-md-3" >
+        <label form="Institucion_input">Institución principal.</label>
+        <input type="text" 
+               id="Institucion_input" 
+               name="instucion"
+               placeholder="Ingresar institucion"
+               required="required"
+               [(ngModel)]="institucion"
+               />
+    </div>
+
+    <div>
+        <label form="asociaciones_input">Instituciones asociadas.</label>
+        <input type="text" 
+               id="asociaciones_input" 
+               name="asociaciones"
+               placeholder="Ingresar institución asociada"
+               required="requiered"
+               [(ngModel)]="asociaciones">
+    </div>
+
+    <div>
+        <select>
+        <label form="p2">Fuente de financiamiento.</label>
+        <option selected disabled>Selecciona una opción</option>
+        <option>Gobierno Federal</option>
+        <option>Gobierno Estatal</option>
+        <option>Conacyt</option>
+        <option>ONG</option>
+        <option>Fomix</option>
+        <option>Institución perteneciente</option>
+        <option>Otro</option>
+        </select>
+        </div>
+    </div>
+     
+     <div class="input_div">
+        <div>
+            <label form="monto_input">Monto del financiamiento.</label>
+            <input type="number" 
+                   id="monto_input"
+                   name="monto"
+                   placeholder="Ingresar monto"
+                   required="required"
+                   [(ngModel)]="monto"
+                   />
+        </div>
+    
+        <div>
+            <label>Productos derivados.</label>
+            <select>
+                <option selected disabled> Seleciona una opción</option>
+                <option>Reporte técnicos</option>
+                <option>Prototipo</option>
+                <option>Publicación</option>
+            </select>
+            </div>
+        
+            <div>
+                <label form="usuario_input">Usuarios.</label>
+                <input type="text"
+                       id="usuario_input" 
+                       name="usuario"
+                       placeholder="Registrar usuario"
+                       required="required"
+                       [(ngModel)]="usuario"
+                       />
+            </div>
+        </div>
+
+        
+        <div class="button_div">
+            <button type="submit" (click)="guardar" >Guardar</button>
+         </div>
+
+
+    <table class="table_books" border="1">
+  
+     <tr>
+   
+       <th>Tipo</th>
+       <th>Nombre del producto</th>
+       <th>Número de registro</th>
+       <th> Fecha de registro </th>
+       <th> Editar </th>
+       <th> Eliminar </th>
+ 
+         
+     </tr>
+ 
+     <tr>
+       <th>null</th>
+       <td>null </td>
+       <td> null</td>
+       <td> null</td>
+       <td>null </td>
+       <td>null </td>
+     </tr>
+   
+     <tr>
+       <th>null</th>
+       <td>null </td>
+       <td> null</td>
+       <td> null</td>
+       <td>null </td>
+       <td>null </td>
+     </tr>
+   </table>
+ 
+    <div class="button_div">
+      <button id="next_button" type="submit" (click)="siguiente()" >Siguiente</button>
+   </div>
+  </form>
+  </div>
+
+
+
