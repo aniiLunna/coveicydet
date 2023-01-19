@@ -31,6 +31,7 @@ import { DivulgacionCientificaComponent } from './layout/private/divulgacion-cie
 import { ImplementacionTecnologicaComponent } from './layout/private/implementacion-tecnologica/implementacion-tecnologica.component';
 import { PncpComponent } from './layout/private/pncp/pncp.component';
 import { TesisComponent } from './layout/private/tesis/tesis.component';
+import { SniComponent } from './layout/private/sni/sni.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { TesisComponent } from './layout/private/tesis/tesis.component';
     ImplementacionTecnologicaComponent,
     PncpComponent,
     TesisComponent,
+    SniComponent,
   ],
   imports: [
     BrowserModule,
